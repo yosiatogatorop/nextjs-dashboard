@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --color-primary-50: #fff1f2;
+  --color-primary-100: #ffe4e6;
+  --color-primary-200: #fecdd3;
+  --color-primary-300: #fda4af;
+  --color-primary-400: #fb7185;
+  --color-primary-500: #f43f5e;
+  --color-primary-600: #e11d48;
+  --color-primary-700: #be123c;
+  --color-primary-800: #9f1239;
+  --color-primary-900: #881337;
+  
+  --color-secondary-50: #fdf2f8;
+  --color-secondary-100: #fce7f3;
+  --color-secondary-200: #fbcfe8;
+  --color-secondary-300: #f9a8d4;
+  --color-secondary-400: #f472b6;
+  --color-secondary-500: #ec4899;
+  --color-secondary-600: #db2777;
+  --color-secondary-700: #be185d;
+  --color-secondary-800: #9d174d;
+  --color-secondary-900: #831843;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-rose-900 bg-rose-50 antialiased;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  .font-romantic {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  /* Romantic Card */
+  .romantic-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .romantic-card-header {
+    @apply bg-gradient-to-r from-rose-500 to-pink-600 text-white p-4;
+  }
+  
+  /* Romantic Button */
+  .btn-romantic {
+    @apply bg-gradient-to-r from-rose-500 to-pink-600 text-white px-6 py-3 rounded-full font-medium 
+           hover:from-rose-600 hover:to-pink-700 transition-all duration-300 
+           flex items-center justify-center shadow-lg shadow-rose-200 hover:shadow-xl;
+  }
+  
+  /* Heart Badge */
+  .heart-badge {
+    @apply bg-rose-100 text-rose-600 px-3 py-1 rounded-full text-xs font-bold 
+           flex items-center justify-center;
+  }
+  
+  /* Romantic Input */
+  .romantic-input {
+    @apply border border-rose-300 rounded-lg px-4 py-2 focus:outline-none 
+           focus:ring-2 focus:ring-rose-500 focus:border-transparent;
+  }
+  
+  /* Section Padding */
+  .section-padding {
+    @apply py-12 px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Romantic Gradient Text */
+  .text-romantic-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  /* Heart Pulse Animation */
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Floating Hearts */
+  .animate-floating-hearts {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Romantic Scrollbar */
+  .scrollbar-romantic::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .scrollbar-romantic::-webkit-scrollbar-track {
+    @apply bg-rose-100;
+  }
+  
+  .scrollbar-romantic::-webkit-scrollbar-thumb {
+    @apply bg-rose-400 rounded-full;
+  }
+  
+  /* Clip Path for Romantic Shapes */
+  .clip-heart {
+    clip-path: path('M10,30 Q15,5 30,10 Q45,5 50,30 Q55,50 30,65 Q5,50 10,30 Z');
+  }
+  
+  /* Text Shadow for Romantic Effect */
+  .text-shadow-romantic {
+    text-shadow: 1px 1px 2px rgba(236, 72, 153, 0.3);
+  }
+  
+  /* Backdrop Filter for Frosted Glass Effect */
+  .backdrop-romantic {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Romantic Transition Effects */
+.romantic-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Custom Scroll Snap */
+.snap-romantic {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-romantic > * {
+  scroll-snap-align: start;
+}
+
+/* Responsive Aspect Ratios */
+.aspect-romantic {
+  aspect-ratio: 3/4;
+}
+
+@supports not (aspect-ratio: 3/4) {
+  .aspect-romantic::before {
+    float: left;
+    padding-top: 133.33%;
+    content: '';
+  }
+  
+  .aspect-romantic::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
