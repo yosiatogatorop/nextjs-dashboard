@@ -12,8 +12,8 @@ export default function RomanticNavbar() {
               <Image 
                 src="/images/logo.png" 
                 alt="Sweet Love Bakery" 
-                width={40} 
-                height={40}
+                width={70} 
+                height={70}
                 className="rounded-full"
               />
               <span className="ml-3 text-xl font-bold text-rose-800 hidden sm:inline">
