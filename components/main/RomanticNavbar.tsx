@@ -1,3 +1,4 @@
+// app/components/main/RomanticNavbar.tsx
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -7,48 +8,50 @@ export default function RomanticNavbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
-            <Link href="/home" className="flex items-center">
+            <Link href="/main/home" className="flex items-center">
               <Image 
-                src="/images/logo-heart.png" 
+                src="/images/logo.png" 
                 alt="Sweet Love Bakery" 
                 width={40} 
                 height={40}
                 className="rounded-full"
               />
-              <span className="ml-3 text-xl font-bold text-rose-800 hidden sm:inline">Sweet Love Bakery</span>
+              <span className="ml-3 text-xl font-bold text-rose-800 hidden sm:inline">
+                Sweet Love Bakery
+              </span>
             </Link>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-1">
             <Link 
-              href="/home" 
+              href="/main/home"   // Update path to /main/home
               className="px-3 py-2 rounded-md text-sm font-medium text-rose-700 hover:bg-rose-50 hover:text-rose-900"
             >
               Home
             </Link>
             <Link 
-              href="/products" 
+              href="/main/products"  // Update path to /main/products
               className="px-3 py-2 rounded-md text-sm font-medium text-rose-700 hover:bg-rose-50 hover:text-rose-900"
             >
               Our Cakes
             </Link>
             <Link 
-              href="/about" 
+              href="/main/about"   // Update path to /main/about
               className="px-3 py-2 rounded-md text-sm font-medium text-rose-700 hover:bg-rose-50 hover:text-rose-900"
             >
               Our Story
             </Link>
             <Link 
-              href="/contact" 
+              href="/main/contact"   // Update path to /main/contact
               className="px-3 py-2 rounded-md text-sm font-medium text-rose-700 hover:bg-rose-50 hover:text-rose-900"
             >
               Contact
             </Link>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <Link 
-              href="/cart" 
+              href="/main/cart"  // Update path to /main/cart
               className="p-1 rounded-full text-rose-700 hover:text-rose-900 relative"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,9 +61,9 @@ export default function RomanticNavbar() {
                 2
               </span>
             </Link>
-            
+
             <Link 
-              href="/login" 
+              href="/auth/login"  // Update path to /auth/login
               className="px-4 py-2 rounded-full bg-gradient-to-r from-rose-400 to-pink-500 text-white text-sm font-medium hover:from-rose-500 hover:to-pink-600 transition duration-300"
             >
               Sign In

@@ -18,7 +18,7 @@ export default function LoginPage() {
     if (username === 'admin123' && password === '12345') {
       router.push('/admin/dashboard');
     } else if (username === 'user123' && password === '12345') {
-      router.push('/home');
+      router.push('/main/home');
     } else {
       setError('Invalid username or password');
     }

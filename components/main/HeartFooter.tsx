@@ -15,10 +15,10 @@ export default function HeartFooter() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/home" className="text-rose-200 hover:text-white">Home</Link></li>
-              <li><Link href="/products" className="text-rose-200 hover:text-white">Our Cakes</Link></li>
-              <li><Link href="/about" className="text-rose-200 hover:text-white">Our Story</Link></li>
-              <li><Link href="/contact" className="text-rose-200 hover:text-white">Contact</Link></li>
+              <li><Link href="/main/home" className="text-rose-200 hover:text-white">Home</Link></li> {/* /main/home */}
+              <li><Link href="/main/products" className="text-rose-200 hover:text-white">Our Cakes</Link></li> {/* /main/products */}
+              <li><Link href="/main/about" className="text-rose-200 hover:text-white">Our Story</Link></li> {/* /main/about */}
+              <li><Link href="/main/contact" className="text-rose-200 hover:text-white">Contact</Link></li> {/* /main/contact */}
             </ul>
           </div>
 

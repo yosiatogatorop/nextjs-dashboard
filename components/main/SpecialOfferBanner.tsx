@@ -1,9 +1,12 @@
+// SpecialOfferBanner.tsx
+'use client';  // Ini mendeklarasikan komponen sebagai Client Component
+
 import { motion } from 'framer-motion';
 import { FaGift, FaHeart } from 'react-icons/fa';
 
-export default function SpecialOfferBanner() {
+const SpecialOfferBanner: React.FC = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -27,14 +30,14 @@ export default function SpecialOfferBanner() {
             transition={{
               duration: Math.random() * 5 + 5,
               repeat: Infinity,
-              ease: "linear",
+              ease: 'linear',
             }}
           >
             <FaHeart />
           </motion.div>
         ))}
       </div>
-      
+
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="flex items-center mb-4 md:mb-0">
           <FaGift className="text-2xl mr-3" />
@@ -43,13 +46,13 @@ export default function SpecialOfferBanner() {
             <p className="text-sm">20% OFF all heart-shaped cakes + free romantic gift wrapping</p>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-3">
           <div className="bg-white bg-opacity-20 px-3 py-1 rounded-full">
             <span className="font-bold">CODE: </span>
             <span className="font-mono">LOVE2025</span>
           </div>
-          
+
           <button className="bg-white text-rose-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-rose-50 transition duration-300 flex items-center">
             Claim Offer <FaHeart className="ml-1" />
           </button>
@@ -57,4 +60,6 @@ export default function SpecialOfferBanner() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default SpecialOfferBanner;
